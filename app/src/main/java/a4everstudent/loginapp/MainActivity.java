@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         //shows username and password on log
         Log.i("User", user.getText().toString());
         Log.i("Pass", pass.getText().toString());
+
+        //change image
+        ImageView helloImage = (ImageView) findViewById(R.id.image);
+        helloImage.setImageResource(R.drawable.lady_bug_hello);
 
         //Says hello to the user using a toast
         CharSequence text = "Hello "+user.getText()+"!";

@@ -13,13 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="User "
+        android:text="@string/user"
         android:ems="10"
         android:id="@+id/user"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="101dp"
-        android:editable="false" />
+        android:editable="false"
+        android:layout_above="@+id/pass"
+        android:layout_alignLeft="@+id/pass"
+        android:layout_alignStart="@+id/pass" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,18 +27,29 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/pass"
-        android:layout_below="@+id/user"
-        android:layout_alignLeft="@+id/user"
-        android:layout_alignStart="@+id/user"
-        android:layout_marginTop="28dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
         android:id="@+id/login"
+        android:onClick="login"
         android:layout_below="@+id/pass"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:onClick="login" />
+        android:layout_marginTop="37dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:src="@drawable/whats_your_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/login"
+        android:layout_above="@+id/user"
+        android:contentDescription="@string/image_saying_quot_what_s_your_name_quot" />
+
 </RelativeLayout>
